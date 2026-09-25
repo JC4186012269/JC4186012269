@@ -11,7 +11,11 @@ echo "Owner: หัวหน้าเท่านั้น - Read Only For Other
 
 # ล็อคไฟล์กฎด้วย
 chmod 444 ./blog-sen/DO_NOT_TOUCH.txt
-<!---
+# เซฟทุกอย่างเข้า Blog Sen ก่อนล็อค
+blog-sen save --all
+# หรือถ้าไม่มีคำสั่ง blog-sen
+git add .
+git commit -m "SAVE ALL - Lock at $(date)"<!---
 JC4186012269/JC4186012269 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 ----
