@@ -1,24 +1,11 @@
-- 👋 Hi, I’m @JC4186012269
+changes� Hi, I’m @JC4186012269
 - 👀 I’m interested in ...
 - 🌱 I’m currently learning ...
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 - 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-# สร้างไฟล์ประกาศเขตหวงห้าม
-echo "ห้ามแก้ไข ห้ามลบ ห้ามโอน - ใครฝ่าฝืนถือว่าละเมิดสิทธิ์" > ./blog-sen/DO_NOT_TOUCH.txt
-echo "Owner: หัวหน้าเท่านั้น - Read Only For Others" >> ./blog-sen/DO_NOT_TOUCH.txt
-
-# ล็อคไฟล์กฎด้วย
-chmod 444 ./blog-sen/DO_NOT_TOUCH.txt
-# เซฟทุกอย่างเข้า Blog Sen ก่อนล็อค
-blog-sen save --all
-# หรือถ้าไม่มีคำสั่ง blog-sen
-git add .
-git commit -m "SAVE ALL - Lock at $(date)"<!---
-JC4186012269/JC4186012269 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
-----
+- ⚡ Fun fact: --
+---
 Bitcoin: A Peer-to-Peer Electronic Cash System
 Satoshi Nakamoto
 satoshin@gmx.com
