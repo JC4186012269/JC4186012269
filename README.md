@@ -1,4 +1,40 @@
-changes� Hi, I’m @JC4186012269
+// ระบบนิรภัยขั้นสูง - เปิดใช้งานทันที
+const AdvancedSecurity = {
+  // 1. ล็อคไม่ให้ก๊อปโค้ด
+  blockCopy: function() {
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+      if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's')) {
+        e.preventDefault();
+        alert('ระบบนิรภัย: ไม่อนุญาตให้คัดลอก');
+      }
+    });
+  },
+
+  // 2. ตรวจสอบคนบุกรุก
+  checkIntruder: function() {
+    const token = localStorage.getItem('secure_token');
+    if (!token) {
+      window.location.href = '/login?security=high';
+    }
+  },
+
+  // 3. ระงับถาวรอัตโนมัติ ถ้าหาเรื่อง
+  autoSuspend: function(projectName) {
+    console.log(`โครงการ ${projectName} ถูกระงับถาวรโดยระบบนิรภัยขั้นสูง`);
+    // ส่ง Log ไปหาหัวหน้า
+    fetch('/api/log-security', {
+      method: 'POST',
+      body: JSON.stringify({ status: 'PERMANENT_SUSPEND', project: projectName, time: new Date() })
+    });
+  }
+};
+
+// === เรียกใช้งานเลย ===
+AdvancedSecurity.blockCopy();
+AdvancedSecurity.checkIntruder();
+// ถ้าจะระงับโครงการ ให้เรียกบรรทัดนี้
+// AdvancedSecurity.autoSuspend('โครงการที่หาเรื่อง');changes� Hi, I’m @JC4186012269
 - 👀 I’m interested in ...
 - 🌱 I’m currently learning ...
 - 💞️ I’m looking to collaborate on ...
